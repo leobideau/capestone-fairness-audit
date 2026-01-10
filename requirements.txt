@@ -1,0 +1,60 @@
+# Python version requirement
+# This project requires Python 3.11.x
+# To check your version: python --version
+# Install Python 3.11 from: https://www.python.org/downloads/
+
+# ============================================
+# Core data science libraries
+# ============================================
+pandas==2.2.3
+numpy==1.26.4
+
+# ============================================
+# Machine learning
+# ============================================
+scikit-learn==1.5.2
+xgboost==2.1.2
+
+# ============================================
+# Deep learning / face recognition
+# ============================================
+deepface==0.0.93
+tensorflow==2.17.0
+tf-keras==2.17.0
+
+# ============================================
+# Computer vision
+# ============================================
+opencv-python==4.10.0.84
+Pillow==10.4.0
+
+# ============================================
+# Visualization
+# ============================================
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# ============================================
+# Data handling
+# ============================================
+pyarrow==18.0.0
+
+# ============================================
+# Progress bars
+# ============================================
+tqdm==4.66.5
+
+# ============================================
+# Text adjustment for plots
+# ============================================
+adjustText==1.2.0
+
+# ============================================
+# Installation instructions:
+# ============================================
+# 1. Make sure you have Python 3.11 installed
+# 2. Create virtual environment: python -m venv venv
+# 3. Activate it:
+#    - Windows: venv\Scripts\activate
+#    - Mac/Linux: source venv/bin/activate
+# 4. Install dependencies: pip install -r requirements.txt
