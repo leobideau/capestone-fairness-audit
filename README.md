@@ -131,8 +131,8 @@ fairface-project/
 ├── results/                     # Output visualizations and models
 ├── main.py                      # Pipeline orchestrator
 ├── requirements.txt             # Python dependencies
-├── AI_USAGE.md 
-├── README.md			 # AI tools documentation
+├── AI_USAGE.md                  # AI tools documentation
+├── README.md			 
 ├── PROPOSAL.md            	 
 └── gitignore
 
