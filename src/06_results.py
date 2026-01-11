@@ -542,7 +542,7 @@ def generate_results():
     html_output = results_dir / 'table_32_models_comparison.html'
     with open(html_output, 'w') as f:
         f.write(styled.to_html())
-    print(f"\n✓ Saved table of 32 models: {html_output}")
+    print(f"\n Saved table of 32 models: {html_output}")
     
     # Afficher dans le terminal (pour info)
     print("\n" + "="*80)
@@ -580,7 +580,7 @@ def generate_results():
     plt.axvline(x=df_sorted.loc[0, 'f1_score'], color='red', linestyle='--', alpha=0.5)
     plt.tight_layout()
     plt.savefig(results_dir / 'top_10_f1_scores.png', dpi=300, bbox_inches='tight')
-    print(f'✓ Saved: top_10_f1_scores.png')
+    print(f'Saved: top_10_f1_scores.png')
     plt.show()
 
     print(f"the best model is: {best_model_name} (f1={df_sorted.loc[0, 'f1_score']:.4f})")
@@ -625,7 +625,7 @@ def generate_results():
     plt.grid(axis="x", linestyle="--", alpha=0.3)
 
     plt.savefig(results_dir / 'top_10_accuracy_vs_f1.png', dpi=300, bbox_inches='tight')
-    print(f'✓ Saved: top_10_accuracy_vs_f1.png')
+    print(f'Saved: top_10_accuracy_vs_f1.png')
     plt.show()
     #this plot clearly shows that f1-score is consistently higher than accuracy for the top models
     # this confirms that the dataset is imbalanced and that accuracy alone would underestimate model quality 
@@ -649,7 +649,7 @@ def generate_results():
     plt.title("Top 10 Models : Accuracy vs F1-score", fontsize=16, weight="bold")
     plt.grid(alpha=0.3)
     plt.savefig(results_dir / 'top_10_scatter.png', dpi=300, bbox_inches='tight')
-    print(f'✓ Saved: top_10_scatter.png')
+    print(f'Saved: top_10_scatter.png')
     plt.show()
     # this scatter plot shows something the barplot can't: how each model balances accuracy vs F1
     # it shows which models are actually consistent (high on both axes) and which ones only look good on one metric
@@ -701,7 +701,7 @@ def generate_results():
     plt.legend(title="F1 Score", bbox_to_anchor=(1.02, 1), loc='upper left', fontsize=10)
     plt.tight_layout()
     plt.savefig(results_dir / 'precision_vs_recall_all_models.png', dpi=300, bbox_inches='tight')
-    print(f'✓ Saved: precision_vs_recall_all_models.png')
+    print(f'Saved: precision_vs_recall_all_models.png')
     plt.show()
     # best model here = xgboost (tuned). highest f1, strong precision, strong recall
     rows = []
@@ -744,7 +744,7 @@ def generate_results():
     plt.title("F1-score Distribution by Model Family", fontsize=16, weight="bold")
     plt.grid(axis="y", alpha=0.3)
     plt.savefig(results_dir / 'roc_curves_comparison.png', dpi=300, bbox_inches='tight')
-    print(f'✓ Saved: roc_curves_comparison.png')
+    print(f'Saved: roc_curves_comparison.png')
     plt.show()
     from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
     from sklearn.preprocessing import StandardScaler
@@ -808,7 +808,7 @@ def generate_results():
     fig.suptitle("confusion matrices : top 3 models", fontsize=18, weight="bold", y=1.02)
     plt.tight_layout()
     plt.savefig(results_dir / 'roc_curve_xgboost_single.png', dpi=300, bbox_inches='tight')
-    print(f'✓ Saved: roc_curve_xgboost_single.png')
+    print(f'Saved: roc_curve_xgboost_single.png')
     plt.show()
 
     from sklearn.metrics import roc_curve, auc
@@ -864,7 +864,7 @@ def generate_results():
     plt.grid(alpha=0.3, linestyle='--')
     plt.tight_layout()
     plt.savefig(results_dir / 'feature_importance.png', dpi=300, bbox_inches='tight')
-    print(f'✓ Saved: feature_importance.png')
+    print(f'Saved: feature_importance.png')
     plt.show()
     import seaborn as sns
     import matplotlib.pyplot as plt
@@ -894,7 +894,7 @@ def generate_results():
 
     plt.tight_layout()
     plt.savefig(results_dir / 'learning_curves.png', dpi=300, bbox_inches='tight')
-    print(f'✓ Saved: learning_curves.png')
+    print(f'Saved: learning_curves.png')
     plt.show()
 
     print("\nrace confidence score:")

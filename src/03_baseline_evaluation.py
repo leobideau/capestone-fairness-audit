@@ -156,7 +156,7 @@ def evaluate_baseline():
     results_dir = BASE_PATH / "results" / "baseline"
     results_dir.mkdir(parents=True, exist_ok=True)
     baseline_metrics.to_csv(results_dir / "baseline_metrics.csv", index=False)
-    print(f"\n✓ Saved baseline metrics CSV: {results_dir / 'baseline_metrics.csv'}")
+    print(f"\n Saved baseline metrics CSV: {results_dir / 'baseline_metrics.csv'}")
     
     # Create and save table image - EXACTLY like other plots
     fig, ax = plt.subplots(figsize=(6, 3))
@@ -175,7 +175,7 @@ def evaluate_baseline():
     plt.title('DeepFace Baseline Performance Metrics', fontsize=12, pad=10)
     plt.tight_layout()
     plt.savefig(results_dir / 'baseline_metrics_table.png', dpi=150, bbox_inches='tight')
-    print(f"✓ Saved baseline metrics image: {results_dir / 'baseline_metrics_table.png'}\n")
+    print(f"Saved baseline metrics image: {results_dir / 'baseline_metrics_table.png'}\n")
     plt.show()
     
     # ============================================

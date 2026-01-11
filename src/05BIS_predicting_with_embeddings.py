@@ -107,7 +107,7 @@ def train_ml_with_embeddings():
     plt.tight_layout()
     plt.savefig(results_dir / "00_baseline_confusion_matrix.png", dpi=150, bbox_inches='tight')
     plt.close()
-    print("✓ Saved baseline confusion matrix")
+    print("Saved baseline confusion matrix")
     
     # ========================================
     # logistic regression:
@@ -149,7 +149,7 @@ def train_ml_with_embeddings():
     plt.tight_layout()
     plt.savefig(results_dir / "01_logistic_confusion_matrix.png", dpi=150, bbox_inches='tight')
     plt.close()
-    print("✓ Saved logistic confusion matrix")
+    print("Saved logistic confusion matrix")
     
     print("\n# embeddings massively improve the model")
     print("# accuracy goes from 0.667 to ~0.74 and global F1 also increases")
@@ -196,7 +196,7 @@ def train_ml_with_embeddings():
     plt.tight_layout()
     plt.savefig(results_dir / "02_knn_confusion_matrix.png", dpi=150, bbox_inches='tight')
     plt.close()
-    print("✓ Saved KNN confusion matrix")
+    print("Saved KNN confusion matrix")
     
     print("\n# embeddings improve Knn nd accuracy increases for every k:")
     print("# k=3 goes from 0.58 to ~0.68")
@@ -246,7 +246,7 @@ def train_ml_with_embeddings():
     plt.tight_layout()
     plt.savefig(results_dir / "03_rf_confusion_matrix.png", dpi=150, bbox_inches='tight')
     plt.close()
-    print("✓ Saved RF confusion matrix")
+    print("Saved RF confusion matrix")
     
     print("\n# embeddings makes random forest go from 0.6748 to ~0.74")
     print("# the trees benefit from the high dimensional embedding space")
@@ -293,7 +293,7 @@ def train_ml_with_embeddings():
     plt.tight_layout()
     plt.savefig(results_dir / "04_svm_linear_confusion_matrix.png", dpi=150, bbox_inches='tight')
     plt.close()
-    print("✓ Saved SVM Linear confusion matrix")
+    print("Saved SVM Linear confusion matrix")
     
     print("\n" + "="*80)
     print("svm rbf with gridsearch")
@@ -331,7 +331,7 @@ def train_ml_with_embeddings():
     plt.tight_layout()
     plt.savefig(results_dir / "05_svm_rbf_confusion_matrix.png", dpi=150, bbox_inches='tight')
     plt.close()
-    print("✓ Saved SVM RBF confusion matrix")
+    print("Saved SVM RBF confusion matrix")
     
     print("\n# embeddings improve Svm rbf from 0.667 to ~0.73 accuracy and F1 from 0.06 to ~0.55")
     print("# linear SVM stops collapsing before it was only class 1 -> now ~0.76 acc and real F1 = ~0.58")
@@ -383,7 +383,7 @@ def train_ml_with_embeddings():
     plt.tight_layout()
     plt.savefig(results_dir / "06_xgboost_confusion_matrix.png", dpi=150, bbox_inches='tight')
     plt.close()
-    print("✓ Saved XGBoost confusion matrix")
+    print("Saved XGBoost confusion matrix")
     
     # ========================================
     # super ensemble: 6 models tuned with stacking
@@ -432,7 +432,7 @@ def train_ml_with_embeddings():
     plt.tight_layout()
     plt.savefig(results_dir / "07_stacking_confusion_matrix.png", dpi=150, bbox_inches='tight')
     plt.close()
-    print("✓ Saved Stacking confusion matrix")
+    print("Saved Stacking confusion matrix")
     
     # Create comprehensive results table
     results_table = pd.DataFrame({
@@ -495,7 +495,7 @@ def train_ml_with_embeddings():
     print("FINAL RESULTS TABLE")
     print("="*80)
     print(results_table.to_string(index=False))
-    print("\n✓ Saved results table to CSV")
+    print("\n Saved results table to CSV")
     
     # Create comparison bar chart
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
@@ -527,7 +527,7 @@ def train_ml_with_embeddings():
     plt.tight_layout()
     plt.savefig(results_dir / "08_model_comparison_chart.png", dpi=150, bbox_inches='tight')
     plt.close()
-    print("✓ Saved comparison chart")
+    print("Saved comparison chart")
     
     # ========================================
     # results embedding :
@@ -571,8 +571,8 @@ def train_ml_with_embeddings():
     print("\n" + "="*80)
     print("ALL RESULTS SAVED!")
     print("="*80)
-    print(f"\n✓ Models saved to: {main_results_dir}")
-    print(f"✓ Detailed results saved to: {results_dir}")
+    print(f"\nModels saved to: {main_results_dir}")
+    print(f"Detailed results saved to: {results_dir}")
     print(f"\nGenerated files:")
     print(f"  - 8 confusion matrices (PNG)")
     print(f"  - Model comparison table (CSV)")
