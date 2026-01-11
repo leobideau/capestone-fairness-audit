@@ -129,6 +129,15 @@ fairface-project/
 │   ├── 06_results.py
 │   └── 07_cases_analysis.py
 ├── results/                     # Output visualizations and models
+│   ├── baseline/                # Baseline outputs and .parquets (pre-computed to save time)
+│   │   ├── pred_train.parquet
+│   │   └── pred_val.parquet
+│   │   └── *.png                # Visualizations
+│   └── features/                # basic features.parquets (pre-computed to save time)
+│   │   ├── train_features.parquet
+│   │   └── val_features.parquet
+│   └── *.png 
+│                   
 ├── main.py                      # Pipeline orchestrator
 ├── requirements.txt             # Python dependencies
 ├── AI_USAGE.md                  # AI tools documentation
@@ -174,3 +183,4 @@ This project demonstrates that machine learning error prediction can significant
 **Student ID**: 21434774
 
 Date: December 2025
+
