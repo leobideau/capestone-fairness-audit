@@ -26,7 +26,7 @@ def extract_embeddings():
     
     # Skip if embeddings already exist
     if train_emb_out.exists() and val_emb_out.exists():
-        print(f"✅ Embeddings already exist, skipping extraction")
+        print(f"Embeddings already exist, skipping extraction")
         print(f"   - {train_emb_out}")
         print(f"   - {val_emb_out}")
         return
@@ -67,7 +67,7 @@ def extract_embeddings():
                 embedding = result.get(timeout=5)  # 5 second timeout
                 return embedding
             except MPTimeoutError:
-                print(f"\n⚠️  Timeout on {path.split('/')[-1]}, skipping...")
+                print(f"\nTimeout on {path.split('/')[-1]}, skipping...")
                 pool.terminate()
                 pool.join()
                 return None
